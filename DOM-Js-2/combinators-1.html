@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p {
+            font-weight: bold;
+        }
+        div>p {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--selector all children of div that are p tags either direct child or indirect child -->
+    <!--Div ke direct children jo ki p tag make that blue  -->
+
+    <div>
+        <p>make me bold</p>   <!-- direct child of div tag-->
+        <span>
+            <p>make me bold</p>    <!-- Indirect child of div tag-->
+        </span>
+    </div>
+</body>
+</html>

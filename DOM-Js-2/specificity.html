@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* if two more selectors pointing at the same element
+         then on the basis os specificiy tyling will aplly on it  */
+        p#some-id.some-class{
+            color : brown
+        }
+        /* 111 */
+        #some-id{
+            color : rebeccapurple
+        }
+        /* 100 */
+        p.some-class{
+            color : black
+        }
+        /* 011 */
+        .some-class {
+            color: aqua;
+        }
+        /* 010 */
+        p{
+            color :   orange
+        }
+        /* 001 */
+
+    </style>
+</head>
+<body>
+    <p class= "some-class "  id = "some-id"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit provident illo harum eaque aspernatur porro ipsam ab modi voluptas veniam!
+    </p>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin : 0 px;
+            padding : 0px;  
+
+        }
+        .super{
+            height:  10rem;
+            width : 10rem;
+            background-color: yellow;
+        }
+        .sub {
+            height: 8rem;
+            width : 8rem;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="super">
+        <div class="sub">
+                <button class = "btn">click </button>
+        </div>
+    </div>
+
+    <script>
+        let superDiv =  document.querySelector(".super");
+        let subDiv =  document.querySelector(".sub");
+        let btnDiv =  document.querySelector(".btn");
+
+        btnDiv.addEventListener("click" , function (){
+            console.log("button clicked on target phase")  
+        })
+         // bubbling will occur in this , we can say this bcs after clicking button elt subDiv & superDiv elt will automatically run. 
+         // this can be stopped using eventPropagation()
+        subDiv.addEventListener("click" , function (){
+           console.log("sub div is there in bubbling phase");
+        })
+        superDiv.addEventListener("click" , function (){
+            console.log("sub div is there in bubbling phase")
+        })
+    </script>
+</body>
+</html>
+
+

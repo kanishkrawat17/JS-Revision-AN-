@@ -1,0 +1,33 @@
+<!-- Target -> on which the mouse is clicked -->
+<!-- currentTarget -> element attached to eventListener  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .super {
+            height: 10rem;
+            width :  10rem;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="super">
+        <button class = "btn"> click </button>
+    </div>
+
+    <script>
+        let superDiv = document.querySelector(".super");
+        superDiv.addEventListener("click", function(e){
+            console.log(e.target);
+            console.log(e.currentTarget);
+        })
+    </script>
+</body>
+</html>
